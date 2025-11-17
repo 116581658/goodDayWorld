@@ -6,3 +6,4 @@ def test_browser_name(playwright):
     print("Using browser: Chromium")
     # browser.close()
     input("Browser is running. Press ENTER to close...")
+    
