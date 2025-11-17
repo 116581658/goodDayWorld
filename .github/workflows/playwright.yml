@@ -20,4 +20,4 @@ jobs:
       run: playwright install chromium
 
     - name: Run tests
-      run: pytest -q
+      run: pytest -s
