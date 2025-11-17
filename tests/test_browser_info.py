@@ -1,8 +1,14 @@
-def test_browser_name(playwright):
-    browser = playwright.chromium.launch(headless=False)
-    context = browser.new_context()
-    page = context.new_page()
-    page.goto("https://playwright.dev")
-    print("Using browser: Chromium")
-    # browser.close()
-    # input("Browser is running. Press ENTER to close...")
+from playwright.sync_api import sync_playwright
+
+p = sync_playwright().start()
+
+browser = p.chromium.launch(headless=False)
+page = browser.new_page()
+page.goto("https://playwright.dev")
+
+print(page.title())
+
+# Keep browser alive
+print("Browser will stay open... Press Ctrl+C to exit.")
+while True:
+    pass
