@@ -5,5 +5,4 @@ def test_browser_name(playwright):
     page.goto("https://playwright.dev")
     print("Using browser: Chromium")
     # browser.close()
-    input("Browser is running. Press ENTER to close...")
-    
+    # input("Browser is running. Press ENTER to close...")
